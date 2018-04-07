@@ -1,0 +1,20 @@
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\obj\Debug\FBSI Manager.csprojResolveAssemblyReference.cache
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\obj\Debug\MainWindow.g.cs
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\obj\Debug\MenuControls.g.cs
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\obj\Debug\App.g.cs
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\obj\Debug\Total Fuel Replacement_MarkupCompile.cache
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\obj\Debug\Total Fuel Replacement_MarkupCompile.lref
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\obj\Debug\Total Fuel Replacement.exe
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\obj\Debug\Total Fuel Replacement.pdb
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\bin\Debug\Total Fuel Replacement.exe.config
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\bin\Debug\Total Fuel Replacement.exe
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\bin\Debug\Total Fuel Replacement.pdb
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\obj\Debug\MainWindow.baml
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\obj\Debug\MenuControls.baml
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\obj\Debug\Total Fuel Replacement.g.resources
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\obj\Debug\Total_Fuel_Replacement.Properties.Resources.resources
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\obj\Debug\FBSI Manager.csproj.GenerateResource.cache
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\obj\Debug\FBSI Manager.csproj.CoreCompileInputs.cache
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\obj\Debug\NameControls.g.cs
+C:\Users\Xnenai\Desktop\Total Fuel Replacement\Total Fuel Replacement\obj\Debug\NameControls.baml
