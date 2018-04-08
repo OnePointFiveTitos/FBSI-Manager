@@ -16,16 +16,13 @@ using System.Windows.Shapes;
 namespace FBSI_Manager
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CustomerControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CustomerControl : UserControl
     {
-        public MainWindow()
+        public CustomerControl()
         {
             InitializeComponent();
-            //test.Children.Add(new DisplayEditControl("First", "Nancy"));
-            //test.Children.Add(new DisplayEditControl("Last", "Pelosi"));
-            //test.Children.Add(new NameControl());
         }
     }
 }

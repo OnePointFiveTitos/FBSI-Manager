@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="FBSI_Manager.DisplayEditControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FBSI_Manager"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style x:Key="Base" TargetType="Control">
+            <Setter Property="MinWidth" Value="50"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="Labels" TargetType="Label" BasedOn="{StaticResource Base}">
+            <Setter Property="Background" Value="DarkGray"/>
+        </Style>
+        <Style x:Key="TextBoxes" TargetType="TextBox" BasedOn="{StaticResource Base}">
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+        </Style>
+    </UserControl.Resources>
+    <StackPanel Orientation="Horizontal">
+        <Label Name="Info" Style="{StaticResource Labels}"/>
+        <Label Name="Display" MouseDoubleClick="Display_MouseDoubleClick" Visibility="Visible" Style="{StaticResource Labels}"/>
+        <TextBox Name="Edit" Visibility="Collapsed" KeyDown="Edit_KeyDown" LostFocus="Edit_LostFocus" Style="{StaticResource TextBoxes}"/>
+    </StackPanel>
+</UserControl>
