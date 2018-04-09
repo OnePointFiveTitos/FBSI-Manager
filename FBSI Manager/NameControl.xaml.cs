@@ -44,7 +44,7 @@ namespace FBSI_Manager
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
             inEditMode = !inEditMode;
-
+            Edit.Content = inEditMode ? "Apply" : "Edit";
             Primary.Visibility = inEditMode ? vis : coll;
             PrimaryLabel.Content = (bool)Primary.IsChecked ? "Primary" : "Associated";
             PrimaryLabel.Visibility = !inEditMode ? vis : coll;
