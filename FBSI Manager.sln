@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBSI Manager", "FBSI Manager\FBSI Manager.csproj", "{FC830B59-57C5-4BC4-A05A-3C7996367DD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBSI Manager", "FBSI Manager\FBSI Manager.csproj", "{40EF2BAD-B04D-4962-80C2-649F4510316F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FC830B59-57C5-4BC4-A05A-3C7996367DD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC830B59-57C5-4BC4-A05A-3C7996367DD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC830B59-57C5-4BC4-A05A-3C7996367DD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC830B59-57C5-4BC4-A05A-3C7996367DD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40EF2BAD-B04D-4962-80C2-649F4510316F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40EF2BAD-B04D-4962-80C2-649F4510316F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40EF2BAD-B04D-4962-80C2-649F4510316F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40EF2BAD-B04D-4962-80C2-649F4510316F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {45231534-1714-482C-930B-BA1D23B38A47}
+		SolutionGuid = {4E22378D-40B8-4455-BA51-381244E4B464}
 	EndGlobalSection
 EndGlobal

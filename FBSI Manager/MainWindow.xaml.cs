@@ -23,9 +23,6 @@ namespace FBSI_Manager
         public MainWindow()
         {
             InitializeComponent();
-            //test.Children.Add(new DisplayEditControl("First", "Nancy"));
-            //test.Children.Add(new DisplayEditControl("Last", "Pelosi"));
-            //test.Children.Add(new NameControl());
         }
     }
 }

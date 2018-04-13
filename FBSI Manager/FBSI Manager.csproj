@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FC830B59-57C5-4BC4-A05A-3C7996367DD3}</ProjectGuid>
+    <ProjectGuid>{40EF2BAD-B04D-4962-80C2-649F4510316F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>FBSI_Manager</RootNamespace>
     <AssemblyName>FBSI Manager</AssemblyName>
@@ -54,68 +54,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="AddressControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CustomerControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="EditDisplayControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="EmailControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="AddressControl.xaml.cs">
-      <DependentUpon>AddressControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CustomerControl.xaml.cs">
-      <DependentUpon>CustomerControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="EditDisplayControl.xaml.cs">
-      <DependentUpon>EditDisplayControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="EmailControl.xaml.cs">
-      <DependentUpon>EmailControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Manager.cs" />
-    <Compile Include="NameControl.xaml.cs">
-      <DependentUpon>NameControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PhoneControl.xaml.cs">
-      <DependentUpon>PhoneControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Address.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customer.cs" />
-    <Compile Include="Email.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="NameControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PhoneControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Name.cs" />
-    <Compile Include="Phone.cs" />
+    <Compile Include="Models\NameModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -141,6 +94,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

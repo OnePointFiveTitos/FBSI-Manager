@@ -1,0 +1,15 @@
+Y:\Github\FBSI Manager\FBSI Manager\bin\Debug\FBSI Manager.exe.config
+Y:\Github\FBSI Manager\FBSI Manager\bin\Debug\FBSI Manager.exe
+Y:\Github\FBSI Manager\FBSI Manager\bin\Debug\FBSI Manager.pdb
+Y:\Github\FBSI Manager\FBSI Manager\obj\Debug\FBSI Manager.csprojResolveAssemblyReference.cache
+Y:\Github\FBSI Manager\FBSI Manager\obj\Debug\MainWindow.g.cs
+Y:\Github\FBSI Manager\FBSI Manager\obj\Debug\App.g.cs
+Y:\Github\FBSI Manager\FBSI Manager\obj\Debug\FBSI Manager_MarkupCompile.cache
+Y:\Github\FBSI Manager\FBSI Manager\obj\Debug\FBSI Manager_MarkupCompile.lref
+Y:\Github\FBSI Manager\FBSI Manager\obj\Debug\MainWindow.baml
+Y:\Github\FBSI Manager\FBSI Manager\obj\Debug\FBSI Manager.g.resources
+Y:\Github\FBSI Manager\FBSI Manager\obj\Debug\FBSI_Manager.Properties.Resources.resources
+Y:\Github\FBSI Manager\FBSI Manager\obj\Debug\FBSI Manager.csproj.GenerateResource.cache
+Y:\Github\FBSI Manager\FBSI Manager\obj\Debug\FBSI Manager.csproj.CoreCompileInputs.cache
+Y:\Github\FBSI Manager\FBSI Manager\obj\Debug\FBSI Manager.exe
+Y:\Github\FBSI Manager\FBSI Manager\obj\Debug\FBSI Manager.pdb
