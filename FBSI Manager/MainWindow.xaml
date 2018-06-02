@@ -4,9 +4,172 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FBSI_Manager"
+        xmlns:corelib="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="MainWindow" Width="150" Height="75">
+        Title="FBSI Manager"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterOwner"
+        MinWidth="1000"
+        MinHeight="500">
+
+    <Window.Resources>
+        <corelib:Boolean x:Key="IsEditable">false</corelib:Boolean>
+    </Window.Resources>
+
     <Grid>
-        <Button Content="Login"/>
+        
+        <!--temporary-->
+        <Grid.Resources>
+            <Style TargetType="MenuItem">
+                <Setter Property="IsEnabled" Value="False"/>
+            </Style>
+        </Grid.Resources>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.ColumnSpan="2">
+            <MenuItem Header="File"/>
+            <MenuItem Header="Open"/>
+            <MenuItem Header="Save"/>
+            <MenuItem Header="Import"/>
+            <MenuItem Header="Export"/>
+            <MenuItem Header="Settings"/>
+            <MenuItem Header="Help"/>
+            <MenuItem Header="About"/>
+            <MenuItem x:Name="ExitItem" Header="Exit" IsEnabled="True" Click="ExitItem_Click"/>
+        </Menu>
+
+        <ListView Grid.Row="1"/>
+        <TabControl Grid.Row="1" Grid.Column="1">
+            <TabItem Header="Single Inputs">
+                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="23"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Menu>
+                        <MenuItem Header="Select"/>
+                        <MenuItem Header="Edit" IsEnabled="True" Click="MenuItem_Click"/>
+                        <MenuItem Header="Add"/>
+                        <MenuItem Header="Remove"/>
+                    </Menu>
+
+                    <StackPanel Grid.Row="1" x:Name="TestPanel">
+
+
+                        <Label Content="Name input"/>
+                        <StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition MinWidth="100" MaxWidth="150"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="Main"/>
+                                <TextBlock Grid.Column="1" Text="Title"/>
+                                <TextBlock Grid.Column="2" Text="First"/>
+                                <TextBlock Grid.Column="3" Text="Middle"/>
+                                <TextBlock Grid.Column="4" Text="Last"/>
+                            </Grid>
+                            <ScrollViewer>
+                                <local:NameView x:Name="nameItem"/>
+                            </ScrollViewer>
+                        </StackPanel>
+
+                        <Label Content="Address input"/>
+                        <StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition MinWidth="100" MaxWidth="150"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition MinWidth="100" MaxWidth="150"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="Main"/>
+                                <TextBlock Grid.Column="1" Text="Address type"/>
+                                <TextBlock Grid.Column="2" Text="Street"/>
+                                <TextBlock Grid.Column="3" Text="City"/>
+                                <TextBlock Grid.Column="4" Text="State"/>
+                                <TextBlock Grid.Column="6" Text="Zipcode (5 digit)"/>
+                            </Grid>
+                            <ScrollViewer>
+                                <local:AddressView x:Name="addressItem"/>
+                            </ScrollViewer>
+                        </StackPanel>
+
+                        <Label Content="Phone input"/>
+                        <StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition MinWidth="100" MaxWidth="150"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="Main"/>
+                                <TextBlock Grid.Column="1" Text="Phone type"/>
+                                <TextBlock Grid.Column="2" Text="Area code"/>
+                                <TextBlock Grid.Column="3" Text="Prefix"/>
+                                <TextBlock Grid.Column="4" Text="Line Number"/>
+                                <TextBlock Grid.Column="5" Text="Extension"/>
+                            </Grid>
+                            <ScrollViewer>
+                                <local:PhoneView x:Name="phoneItem"/>
+                            </ScrollViewer>
+                        </StackPanel>
+
+                        <Label Content="Email input"/>
+                        <StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition MinWidth="100" MaxWidth="150"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="Main"/>
+                                <TextBlock Grid.Column="1" Text="Email type"/>
+                                <TextBlock Grid.Column="2" Text="Handle"/>
+                                <TextBlock Grid.Column="3" Text="Domain"/>
+                                <TextBlock Grid.Column="4" Text="Register"/>
+                            </Grid>
+                            <ScrollViewer>
+                                <local:EmailView x:Name="emailItem"/>
+                            </ScrollViewer>
+                        </StackPanel>
+                    </StackPanel>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Group Inputs Type 1">
+                <StackPanel>
+                    <local:NamesContainer/>
+                    <local:AddressesContainer/>
+                    <local:PhonesContainer/>
+                    <local:EmailsContainer/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Group Inputs Type 2">
+                <local:Container/>
+            </TabItem>
+        </TabControl>
+        
     </Grid>
 </Window>

@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="FBSI_Manager.Container"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FBSI_Manager">
+
+    <UserControl.Resources>
+        <Style TargetType="Border">
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="DarkGray"/>
+        </Style>
+
+        <Style x:Key="ContainersStyle" TargetType="StackPanel">
+            <Setter Property="Orientation" Value="{Binding IsHorizontal, Converter={StaticResource BoolToOrientation}, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:Container}}}"/>
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem x:Name="SelectItem" Header="Select All"/>
+            <MenuItem x:Name="EditItem" Header="Edit"/>
+            <MenuItem x:Name="AddItem" Header="Add" IsEnabled="True">
+                <MenuItem x:Name="AddName" Header="Name" Click="AddName_Click" IsEnabled="{Binding AddItem.IsEnabled}"/>
+                <MenuItem x:Name="AddAddress" Header="Address" Click="AddAddress_Click" IsEnabled="{Binding AddItem.IsEnabled}"/>
+                <MenuItem x:Name="AddPhone" Header="Phone" Click="AddPhone_Click" IsEnabled="{Binding AddItem.IsEnabled}"/>
+                <MenuItem x:Name="AddEmail" Header="Email" Click="AddEmail_Click" IsEnabled="{Binding AddItem.IsEnabled}"/>
+            </MenuItem>
+            <MenuItem x:Name="RemoveItem" Header="Remove"/>
+            <MenuItem x:Name="OrientationItem" Header="Orientation" IsEnabled="True" Click="OrientationItem_Click"/>
+        </Menu>
+
+        <Border Grid.Row="1">
+            <StackPanel x:Name="Containers">
+                <TextBlock Text="Name: "/>
+                <Border>
+                    <ScrollViewer>
+                        <StackPanel x:Name="Names" Style="{StaticResource ContainersStyle}">
+                            <local:NameView/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+
+                <TextBlock Text="Address: "/>
+                <Border>
+                    <ScrollViewer>
+                        <StackPanel x:Name="Addresses" Style="{StaticResource ContainersStyle}">
+                            <local:AddressView/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+
+                <TextBlock Text="Phone: "/>
+                <Border>
+                    <ScrollViewer>
+                        <StackPanel x:Name="Phones" Style="{StaticResource ContainersStyle}">
+                            <local:PhoneView/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+
+                <TextBlock Text="Email: "/>
+                <Border>
+                    <ScrollViewer>
+                        <StackPanel x:Name="Emails" Style="{StaticResource ContainersStyle}">
+                            <local:EmailView/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

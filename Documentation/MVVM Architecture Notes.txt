@@ -1,9 +1,0 @@
-MVVM (Model-View-ViewModel)
-Model - A data object
-View - UI
-ViewModel - Business logic (UI handling)
-
-View is completely decoupled, and knows nothing about the ViewModel. Same with ViewModel to View
-Model should be lightweight with data and validation
-ViewModel - takes user input and manipulates, saves, loads data etc
-Model and ViewModel can be coupled

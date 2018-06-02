@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{40EF2BAD-B04D-4962-80C2-649F4510316F}</ProjectGuid>
+    <ProjectGuid>{5E41C7EB-B63A-431B-9C78-08DD4B037F00}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>FBSI_Manager</RootNamespace>
     <AssemblyName>FBSI Manager</AssemblyName>
@@ -54,6 +54,66 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MVVM\Converters\BoolToOrientationConverter.cs" />
+    <Compile Include="Container.xaml.cs">
+      <DependentUpon>Container.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\Containers\AddressesContainer.xaml.cs">
+      <DependentUpon>AddressesContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\Containers\EmailsContainer.xaml.cs">
+      <DependentUpon>EmailsContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\Singles\EmailView.xaml.cs">
+      <DependentUpon>EmailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="MVVM\Views\Singles\AddressView.xaml.cs">
+      <DependentUpon>AddressView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Converters\BoolToBrushConverter.cs" />
+    <Compile Include="MVVM\Models\InformationObject.cs" />
+    <Compile Include="MVVM\Models\Customer\Contact Information\Address.cs" />
+    <Compile Include="MVVM\Models\Customer\Customer.cs" />
+    <Compile Include="MVVM\Models\Customer\Contact Information\Email.cs" />
+    <Compile Include="MVVM\ViewModels\Customer\Contact Information\AddressViewModel.cs" />
+    <Compile Include="MVVM\ViewModels\Customer\CustomerViewModel.cs" />
+    <Compile Include="MVVM\ViewModels\Customer\Contact Information\EmailViewModel.cs" />
+    <Compile Include="Enums\AddressTypes.cs" />
+    <Compile Include="Enums\StateAbbreviationTypes.cs" />
+    <Compile Include="Enums\StateTypes.cs" />
+    <Compile Include="MVVM\Views\Singles\NameView.xaml.cs">
+      <DependentUpon>NameView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\Singles\PhoneView.xaml.cs">
+      <DependentUpon>PhoneView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\Containers\NamesContainer.xaml.cs">
+      <DependentUpon>NamesContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\Containers\PhonesContainer.xaml.cs">
+      <DependentUpon>PhonesContainer.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Container.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\Containers\AddressesContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\Containers\EmailsContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\Singles\EmailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\Singles\AddressView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -62,13 +122,38 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Enums\CustomerStandingTypes.cs" />
+    <Compile Include="Enums\EmailTypes.cs" />
+    <Compile Include="Enums\GenerationTypes.cs" />
+    <Compile Include="MVVM\ViewModels\InformationObjectViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\Views\Singles\NameView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\Singles\PhoneView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\Containers\NamesContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\Containers\PhonesContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\NameModel.cs" />
+    <Compile Include="Enums\PhoneTypes.cs" />
+    <Compile Include="MVVM\ViewModels\Customer\Contact Information\NameViewModel.cs" />
+    <Compile Include="MVVM\ViewModels\ObservableObject.cs" />
+    <Compile Include="MVVM\ViewModels\Customer\Contact Information\PhoneViewModel.cs" />
+    <Compile Include="MVVM\Models\Customer\Contact Information\Name.cs" />
+    <Compile Include="MVVM\Models\Customer\Contact Information\Phone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -95,8 +180,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModels\" />
-    <Folder Include="Views\" />
+    <Folder Include="MVVM\Models\Customer\Service Information\" />
+    <Folder Include="MVVM\ViewModels\Customer\Service Information\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

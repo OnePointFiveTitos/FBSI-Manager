@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="FBSI_Manager.EmailView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FBSI_Manager"
+             MouseDoubleClick="UserControl_MouseDoubleClick">
+    <Grid>
+        <!--horizontal-->
+        <Grid Visibility="{Binding IsHorizontal, Converter={StaticResource BoolToVisibility}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition MinWidth="100" MaxWidth="150"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <CheckBox Grid.Column="0" IsChecked="{Binding IsMain}" VerticalAlignment="Center" Margin="2" IsEnabled="{Binding IsEditable}"/>
+            <ComboBox Grid.Column="1" ItemsSource="{Binding Types}" SelectedItem="{Binding EmailType}" Margin="2" IsEnabled="{Binding IsEditable}"/>
+            <TextBox Grid.Column="2" Text="{Binding Handle}"/>
+            <TextBox Grid.Column="3" Text="{Binding Domain}"/>
+            <TextBox Grid.Column="4" Text="{Binding Register}"/>
+        </Grid>
+        <!--vertical-->
+        <Grid Visibility="{Binding IsVertical, Converter={StaticResource BoolToVisibility}}" HorizontalAlignment="Left">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Content="Primary"/>
+            <Label Grid.Row="1" Content="Type"/>
+            <Label Grid.Row="2" Content="Handle"/>
+            <Label Grid.Row="3" Content="Domain"/>
+            <Label Grid.Row="4" Content="Register"/>
+
+            <CheckBox Grid.Column="1" Grid.Row="0" IsChecked="{Binding IsMain}" VerticalAlignment="Center" Margin="2" IsEnabled="{Binding IsEditable}"/>
+            <ComboBox Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Types}" SelectedItem="{Binding EmailType}" Margin="2" IsEnabled="{Binding IsEditable}"/>
+            <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Handle}"/>
+            <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Domain}"/>
+            <TextBox Grid.Column="1" Grid.Row="4" Text="{Binding Register}"/>
+
+        </Grid>
+        <!--<StackPanel Visibility="{Binding IsVertical, Converter={StaticResource BoolToVisibility}}">
+            <CheckBox Grid.Column="0" IsChecked="{Binding IsMain}" VerticalAlignment="Center" Margin="2" IsEnabled="{Binding IsEditable}"/>
+            <ComboBox Grid.Column="1" ItemsSource="{Binding Types}" SelectedItem="{Binding EmailType}" Margin="2" IsEnabled="{Binding IsEditable}"/>
+            <TextBox Grid.Column="2" Text="{Binding Handle}"/>
+            <TextBox Grid.Column="3" Text="{Binding Domain}"/>
+            <TextBox Grid.Column="4" Text="{Binding Register}"/>
+        </StackPanel>-->
+    </Grid>
+</UserControl>

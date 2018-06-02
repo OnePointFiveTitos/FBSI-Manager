@@ -4,6 +4,26 @@
              xmlns:local="clr-namespace:FBSI_Manager"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        
+        <local:BoolToBrushConverter x:Key="BoolToBrush"/>
+        <local:BoolToVisibilityConverter x:Key="BoolToVisibility"/>
+        <local:BoolToOrientationConverter x:Key="BoolToOrientation"/>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="IsEnabled" Value="{Binding IsEditable}"/>
+            <Setter Property="Background" Value="{Binding IsEditable, Converter={StaticResource BoolToBrush}}"/>
+        </Style>
+
+        <!--<Style x:Key="CategoryLabels" TargetType="Label">
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        </Style>-->
+
+        <Style TargetType="Label">
+            <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        </Style>
+
     </Application.Resources>
 </Application>
